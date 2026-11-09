@@ -200,6 +200,8 @@
   .p-link:hover { gap: .9rem; color: var(--indigo); }
   .p-link svg { width: 15px; height: 15px; }
   .p-link.soon { color: var(--muted); font-weight: 500; pointer-events: none; }
+  .p-link.private { color: var(--muted); font-weight: 600; cursor: default; }
+  .p-link.private:hover { gap: .5rem; color: var(--muted); }
   .p-link.soon::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; }
 
   /* CONTACT */
@@ -436,9 +438,11 @@
         </div>
         <div class="p-body">
           <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
-          <h4>Site web DGAM</h4>
-          <p>Site web institutionnel conçu pour présenter l'organisation et ses services, avec une interface claire et responsive.</p>
-          <a href="#" class="p-link soon">Bientôt en ligne</a>
+          <h4>Site web DGAMP</h4>
+          <p>Site web des Affaires Maritimes Ivoiriennes, conçu pour présenter l'institution et ses services avec une interface claire et responsive.</p>
+          <a href="https://www.dgamp.ci/" target="_blank" rel="noopener" class="p-link">Voir le site
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
         </div>
       </article>
 
@@ -464,7 +468,10 @@
           <div class="tags"><span class="tag">Next.js</span><span class="tag">PHP</span><span class="tag">API</span></div>
           <h4>Gestion &amp; Suivi des Prospects CIMAT_IATA</h4>
           <p>Application de gestion et de suivi des prospects pour centraliser les contacts et suivre leur avancement commercial.</p>
-          <a href="#" class="p-link soon">Bientôt en ligne</a>
+          <span class="p-link private">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+            Projet privé
+          </span>
         </div>
       </article>
 
