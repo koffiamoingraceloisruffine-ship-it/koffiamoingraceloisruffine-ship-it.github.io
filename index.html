@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rufine Koffi — Développeuse Full Stack</title>
-<meta name="description" content="Portfolio de Koffi Amoin Grace Loïs Rufine, développeuse Full Stack à Abidjan : applications web et mobiles modernes.">
+<title>Rufine Koffi — Développeuse Front-end</title>
+<meta name="description" content="Portfolio de Koffi Amoin Grace Loïs Rufine, développeuse Front-end à Abidjan : applications web et mobiles modernes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -200,6 +200,8 @@
   .p-link:hover { gap: .9rem; color: var(--indigo); }
   .p-link svg { width: 15px; height: 15px; }
   .p-link.soon { color: var(--muted); font-weight: 500; pointer-events: none; }
+  .p-link.private { color: var(--muted); font-weight: 600; cursor: default; }
+  .p-link.private:hover { gap: .5rem; color: var(--muted); }
   .p-link.soon::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #f59e0b; }
 
   /* CONTACT */
@@ -272,7 +274,7 @@
     <li><a href="#projects">Projets</a></li>
     <li><a href="#contact">Contact</a></li>
     <li>
-      <a href="/img/Cv_Rufine_Koffi.pdf" target="_blank" class="nav-cta">
+      <a id="cvLink" href="Cv_Rufine_Koffi.pdf" target="_blank" rel="noopener" class="nav-cta">
         <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
         Mon CV
       </a>
@@ -290,7 +292,7 @@
         <span class="small">Koffi Amoin Grace Loïs Rufine</span>
         Je donne vie à vos idées sur le <em>web</em> &amp; le mobile.
       </h1>
-      <p class="lede">Développeuse Full Stack, je conçois des applications modernes, performantes et élégantes. Passionnée par le code propre, les interfaces soignées et l'apprentissage continu.</p>
+      <p class="lede">Développeuse Front-end, je conçois des applications modernes, performantes et élégantes. Passionnée par le code propre, les interfaces soignées et l'apprentissage continu.</p>
       <div class="btns">
         <a href="#projects" class="btn btn-main">Voir mes projets
           <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -311,7 +313,7 @@
         <pre class="code"><span class="c">// rufine.js</span>
 <span class="k">const</span> <span class="f">developpeuse</span> = {
   nom: <span class="s">"Rufine Koffi"</span>,
-  role: <span class="s">"Font"</span>,
+  role: <span class="s">"Front-end"</span>,
   front: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JS"</span>],
   back: [<span class="s">"PHP"</span>, <span class="s">"MySQL"</span>],
   mobile: <span class="s">"Flutter"</span>,
@@ -337,16 +339,16 @@
     <div class="reveal">
       <div class="portrait">
         <div class="portrait-img">
-          <img src="/img/CICI.jpeg" alt="Koffi Amoin Grace Loïs Rufine" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <img id="photo" src="CICI.jpeg" alt="Koffi Amoin Grace Loïs Rufine">
           <div class="portrait-fallback">R</div>
         </div>
-        <div class="portrait-tag"><b>Rufine Koffi</b>Développeuse Font end </div>
+        <div class="portrait-tag"><b>Rufine Koffi</b>Développeuse Front-end</div>
       </div>
     </div>
     <div class="about-text reveal">
       <div class="eyebrow">Qui suis-je</div>
       <h3>Transformer des idées complexes en solutions digitales simples et efficaces.</h3>
-      <p>Je suis développeuse Full Stack basée à Abidjan, spécialisée dans la création d'applications web et de sites performants et évolutifs.</p>
+      <p>Je suis développeuse Front-end basée à Abidjan, spécialisée dans la création d'applications web et de sites performants et évolutifs.</p>
       <p>Avec une solide maîtrise de JavaScript, HTML, CSS, PHP et d'autres technologies, j'interviens aussi bien sur le front-end que sur le back-end pour livrer des projets complets — et j'élargis aujourd'hui mes compétences vers le mobile avec Flutter.</p>
       <div class="facts">
         <div class="fact"><strong>6 mois+</strong><span>Expérience</span></div>
@@ -436,9 +438,11 @@
         </div>
         <div class="p-body">
           <div class="tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
-          <h4>Site web DGAM</h4>
-          <p>Site web institutionnel conçu pour présenter l'organisation et ses services, avec une interface claire et responsive.</p>
-          <a href="#" class="p-link soon">Bientôt en ligne</a>
+          <h4>Site web DGAMP</h4>
+          <p>Site web des Affaires Maritimes Ivoiriennes, conçu pour présenter l'institution et ses services avec une interface claire et responsive.</p>
+          <a href="https://www.dgamp.ci/" target="_blank" rel="noopener" class="p-link">Voir le site
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
         </div>
       </article>
 
@@ -464,7 +468,10 @@
           <div class="tags"><span class="tag">Next.js</span><span class="tag">PHP</span><span class="tag">API</span></div>
           <h4>Gestion &amp; Suivi des Prospects CIMAT_IATA</h4>
           <p>Application de gestion et de suivi des prospects pour centraliser les contacts et suivre leur avancement commercial.</p>
-          <a href="#" class="p-link soon">Bientôt en ligne</a>
+          <span class="p-link private">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>
+            Projet privé
+          </span>
         </div>
       </article>
 
@@ -487,7 +494,7 @@
           <div class="c-links">
             <a href="mailto:koffiamoingraceloisrufine@gmail.com" class="c-link">
               <span class="c-ico"><svg fill="none" stroke="#fff" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
-              koffiamoingraceloisrufine@email.com
+              koffiamoingraceloisrufine@gmail.com
             </a>
             <a href="https://linkedin.com/in/rufine-koffi" target="_blank" rel="noopener" class="c-link">
               <span class="c-ico"><svg fill="#fff" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
@@ -518,7 +525,7 @@
 </section>
 
 <footer>
-  <p>© 2026 Koffi Amoin Grace Loïs Rufine — Développeuse Full Stack · Abidjan, Côte d'Ivoire</p>
+  <p>© 2026 Koffi Amoin Grace Loïs Rufine — Développeuse Front-end · Abidjan, Côte d'Ivoire</p>
   <a href="#top" class="to-top" aria-label="Retour en haut"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
 </footer>
 
@@ -561,8 +568,32 @@
   document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
     const n = fName.value, m = fEmail.value, msg = fMsg.value;
-    location.href = 'mailto:koffiamoingraceloisrufine@email.com?subject=' + encodeURIComponent('Contact portfolio — ' + n) + '&body=' + encodeURIComponent(msg + '\n\n— ' + n + ' (' + m + ')');
+    location.href = 'mailto:koffiamoingraceloisrufine@gmail.com?subject=' + encodeURIComponent('Contact portfolio — ' + n) + '&body=' + encodeURIComponent(msg + '\n\n— ' + n + ' (' + m + ')');
   });
+
+  // Photo & CV : essaie plusieurs noms/emplacements possibles
+  (function () {
+    const photo = document.getElementById('photo');
+    const photoTries = ['CICI.jpeg','img/CICI.jpeg','CICI.jpg','img/CICI.jpg','cici.jpeg','img/cici.jpeg','photo.jpeg','img/photo.jpeg','photo.jpg','img/photo.jpg'];
+    let i = 0;
+    photo.onerror = function () {
+      i++;
+      if (i < photoTries.length) { photo.src = photoTries[i]; }
+      else { photo.style.display = 'none'; photo.nextElementSibling.style.display = 'grid'; }
+    };
+    photo.src = photoTries[0];
+
+    const cv = document.getElementById('cvLink');
+    const cvTries = ['Cv_Rufine_Koffi.pdf','img/Cv_Rufine_Koffi.pdf','CV_Rufine_Koffi.pdf','img/CV_Rufine_Koffi.pdf','cv.pdf','img/cv.pdf'];
+    (async function () {
+      for (const f of cvTries) {
+        try {
+          const r = await fetch(encodeURI(f), { method: 'HEAD' });
+          if (r.ok) { cv.href = encodeURI(f); return; }
+        } catch (e) {}
+      }
+    })();
+  })();
 </script>
 </body>
 </html>
